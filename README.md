@@ -1,58 +1,52 @@
-Text Analysis Web Application
+# Text Analysis Web Application
 
 This project is a simple web-based application that allows users to input text manually and analyze the provided content. It is lightweight, easy to set up, and runs on a Docker container for portability and ease of deployment.
 
-Technologies Used
+## Technologies Used
 
-    Frontend: HTML, CSS, JavaScript
-    Backend: Python (Flask for serving the web app)
-    Containerization: Docker
+- **Frontend**: HTML, CSS, JavaScript
+- **Backend**: Python (Flask for serving the web app)
+- **Containerization**: Docker
 
-Here's the updated README.md file with details about the Docker setup, updated feature descriptions, and languages used:
-Text Analysis Web Application
+## Requirements
 
-This project is a simple web-based application that allows users to input text manually and analyze the provided content. It is lightweight, easy to set up, and runs on a Docker container for portability and ease of deployment.
-Features
+- **Docker**: Installed on your system
+- **Port**: The application runs on port `8000` by default
+- **Modern Browser**: A modern web browser to interact with the app
 
-    Manual Text Input: Enter text into a user-friendly input box for analysis.
-    Dockerized Setup: Easily deploy the application using Docker.
-    Real-time Results: Analyze text and view results immediately in the browser.
-    Multi-language Support: The project can be extended to support additional languages for text processing.
+## Installation and Setup
 
-Technologies Used
-
-    Frontend: HTML, CSS, JavaScript
-    Backend: Python (Flask for serving the web app)
-    Containerization: Docker
-
-Requirements
-
-    Docker: Installed on your system.
-    Port: The application runs on port 8000 by default.
-    Modern Browser: A modern web browser to interact with the app.
-
-Installation and Setup
-1. Clone the Repository
+### 1. Clone the Repository
 
 Clone the repository to your local machine:
 
+```bash
 git clone <repository-url>
 cd <project-folder>
+```
 
-2. Build the Docker Image
+### 2. Dockerized Setup
 
-Build the Docker image for the application:
+#### Build the Docker Image
 
-docker build -t text-analysis-app .
+To build the Docker image for the application, use the following command:
 
-3. Run the Docker Container
+```bash
+docker build -t my-app .
+```
 
-Run the application using Docker:
+#### Run the Docker Container
 
-docker run -p 8000:8000 text-analysis-app
+Once the image is built, run the container:
 
-4. Access the Application
+```bash
+docker run -p 8000:8000 my-app
+```
 
-Open your browser and go to:
+#### Access the Application
 
+After the container is running, open your web browser and go to:
+
+```
 http://127.0.0.1:8000
+```
