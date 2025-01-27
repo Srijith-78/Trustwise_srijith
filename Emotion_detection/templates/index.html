@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Toxicity and Emotion Tracker</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <div class="container">
+    <h1 class="centered-heading">Toxicity and Emotion Tracker</h1>
+
+    <div class="left-side">
+      <textarea id="text-input" placeholder="Enter your text here..."></textarea>
+      <button onclick="analyzeText()">Analyze</button>
+
+      <div id="loading" style="display: none;">Analyzing... Please wait.</div>
+
+      <div id="result">
+        <h3>Toxicity:</h3>
+        <p id="toxicity-result"></p>
+        <p id="toxicity-highest-score"></p>
+
+        <h3>Emotion:</h3>
+        <p id="emotion-result"></p>
+        <p id="emotion-highest-score"></p>
+      </div>
+
+      <canvas id="toxicity-chart" width="400" height="200"></canvas>
+      <canvas id="emotion-chart" width="400" height="200"></canvas>
+    </div>
+
+    <div class="right-side">
+      <button id="historyButton">Show History</button>
+      <div id="historyTable" style="display: none;">
+        <button id="backButton">Back</button>
+        <h3>History</h3>
+        <div class="table-container">
+          <table>
+            <thead>
+              <tr>
+                <th>Text</th>
+                <th>Emotion Label</th>
+                <th>Emotion Score</th>
+                <th>Toxicity Label</th>
+                <th>Toxicity Score</th>
+              </tr>
+            </thead>
+            <tbody id="history-table-body">
+            </tbody>
+          </table>
+        </div>
+      </div> 
+    </div>
+  </div>
+
+  <script src="{{ url_for('static', filename='scripts.js') }}"></script>
+</body>
+</html>
